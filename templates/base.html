@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Flask</title>
+</head>
+<body>
+
+    
+    <nav>
+        <ul>
+            <!--Jinja templating that places the url_for() method within the <a> elements.
+                When an <a> element is clicked, the url_for() method is used to call that view (function.)
+                The names must match the views they are calling.
+                    -->
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('careers') }}">Careers</a></li>
+        </ul>
+    </nav>
+
+    <!--The below code defines a block (or area) within our base.html file 
+        that our child templates will inject their content into-->
+    {% block content %}
+    {% endblock %}
+    
+</body>
+</html>
