@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}"> <!--Two argument; the directory and the specific file-->
     <title>Hello Flask</title>
 </head>
 <body>
 
     
-    <nav>
+    <nav class="navbar">
         <ul>
             <!--Jinja templating that places the url_for() method within the <a> elements.
                 When an <a> element is clicked, the url_for() method is used to call that view (function.)
